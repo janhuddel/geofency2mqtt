@@ -7,7 +7,7 @@ var mqttClient = mqtt.connect(mqttUrl);
 var express = require('express');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
-var httpServerPort = 40080;
+var httpServerPort = 80;
 var app = express();
 
 // setup
