@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "minimist": "^1.2.0",
     "morgan": "^1.8.1",
     "mqtt": "2.7.1"
   }
