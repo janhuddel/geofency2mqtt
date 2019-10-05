@@ -39,6 +39,13 @@ mqttClient.on('connect', function() {
     res.send('ok');
   });
 
+  // handle GET-request
+  app.get('/nfc/:username/', function (req, res) {
+    mqttClient.publish('nfc/scan/' + req.params.username, 'scanned');
+    console.log('nfc-tag for \'' + req.params.username + '\' scanned');
+    res.send('ok');
+  });
+
   // test endpoint
   app.get('/', function (req, res) {
     res.send('it works...');
